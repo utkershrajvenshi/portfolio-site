@@ -1,0 +1,10 @@
+site_name: Utkersh Rajvenshi
+site_url: http://utkershrajvenshi.in/
+nav:
+  - Home: index.md
+  - Projects: projects.md
+  - Experience Timeline: timeline.md
+  - About: about.md
+theme:
+  name: bootstrap
+  nav_style: dark
