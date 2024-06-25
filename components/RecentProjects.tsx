@@ -16,9 +16,13 @@ const RecentProjects = () => {
             <PinContainer title={link} href={link}>
               <div className='relative flex items-center justify-center w-[80vw] sm:w-[570px] overflow-hidden h-[30vh] sm:h-[40vh] mb-10'>
                 <div className='relative w-full h-full overflow-hidden lg:rounded-3xl bg-[#13162D]'>
-                  <img src="/bg.png" alt="bg-img" />
+                  <picture>
+                    <img src="/bg.png" alt="bg-img" />
+                  </picture>
                 </div>
-                <img src={img} alt={title} className='z-10 absolute bottom-0' />
+                <picture className='z-10 absolute bottom-0'>
+                  <img src={img} alt={title} />
+                </picture>
               </div>
               <h1 className='font-bold text-base md:text-xl lg:text-2xl line-clamp-1'>
                 {title}
@@ -34,7 +38,9 @@ const RecentProjects = () => {
                         transform: `translateX(-${5 * idx * 2}px)`,
                       }}
                     >
-                      <img src={icon} alt={icon} className='p-2' />
+                      <picture>
+                        <img src={icon} alt={icon} className='p-2' />
+                      </picture>
                     </div>
                   ))}
                 </div>

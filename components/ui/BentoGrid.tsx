@@ -3,7 +3,7 @@
 import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
-import { leftLists, rightLists } from "@/data";
+import { listOne, listTwo, listThree } from "@/data";
 import Lottie from "react-lottie";
 import { useState } from "react";
 import animationData from '@/data/confetti.json'
@@ -89,7 +89,7 @@ export const BentoGridItem = ({
         {id === 5 && (
           <BackgroundGradientAnimation />
         )}
-        <div className={cn(titleClassName, 'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10')}>
+        <div className={cn(titleClassName, 'group-hover/bento:translate-x-2 transition duration-200 relative md:h-full min-h-40 flex flex-col px-5 p-5 lg:p-10', `${id === 3 && 'justify-start py-5 lg:py-10'}`)}>
           <div className="font-sans font-extralight text-[#c1c2d3] text-sm md:text-xs lg:text-base z-10">
             {description}
           </div>
@@ -100,18 +100,26 @@ export const BentoGridItem = ({
             <GlobeDemo />
           )}
           {id === 3 && (
-            <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-              <div className="flex flex-col gap-3 lg:gap-4">
-                {leftLists.map((item, idx) => (
+            <div className="flex flex-row md:flex-col gap-1 lg:gap-3 w-fit absolute -right-3 md:-right-2 md:bottom-40">
+              <div className="flex flex-col md:flex-row gap-1 lg:gap-3">
+                <span className="py-4 px-3 md:w-10 rounded-md md:rounded-lg text-center bg-[#10132E]" />
+                {listOne.map((item, idx) => (
                   <span key={idx} className="py-2 lg:py-4 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                     {item}
                   </span>
                 ))}
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
               </div>
-              <div className="flex flex-col gap-3 lg:gap-4">
-                <span className="py-4 px-3 rounded-lg text-center bg-[#10132E]" />
-                {rightLists.map((item, idx) => (
+              <div className="flex flex-col md:flex-row gap-1 lg:gap-3">
+                {listTwo.map((item, idx) => (
+                  <span key={idx} className="py-2 lg:py-4 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-md md:rounded-lg text-center bg-[#10132E]">
+                    {item}
+                  </span>
+                ))}
+                <span className="py-4 px-3 md:w-14 rounded-md md:rounded-lg text-center bg-[#10132E]" />
+              </div>
+              <div className="flex flex-col md:flex-row gap-1 lg:gap-3">
+                <span className="py-4 px-3 md:w-12 rounded-md md:rounded-lg text-center bg-[#10132E]" />
+                {listThree.map((item, idx) => (
                   <span key={idx} className="py-2 lg:py-4 px-3 text-xs lg:text-base opacity-50 lg:opacity-100 rounded-lg text-center bg-[#10132E]">
                     {item}
                   </span>
