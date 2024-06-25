@@ -5,9 +5,9 @@ import { socialMedia } from '@/data'
 
 const Footer = () => {
   return (
-    <footer className="w-full pt-20 pb-10" id="contact">
-      <div className="w-full absolute left-0 -bottom-72 min-h-96">
-        <img src="/footer-grid.svg" alt="grid" className="w-full h-full opacity-50"/>
+    <footer className="w-full mb-[100px] md:mb-5 pb-10" id="contact">
+      <div className="w-full absolute left-[25%] -bottom-0 min-h-96">
+        <img src="/footer-grid.svg" alt="grid" className="w-[70%] h-[70%] opacity-60"/>
       </div>
       <div className="flex flex-col items-center">
         <h1 className="heading lg:max-w-[45vw]">
@@ -28,7 +28,7 @@ const Footer = () => {
         <p className="text-sm md:text-base font-light md:font-normal">
           Copyright © 2024, Utkersh Rajvenshi
         </p>
-        <div className="flex items-center gap-6 md:gap-3">
+        <div className="flex items-center mt-2 md:mt-0 gap-6 md:gap-3">
           {socialMedia.map((info) => (
             <div
               key={info.id}
