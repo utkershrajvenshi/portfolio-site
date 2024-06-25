@@ -23,7 +23,7 @@ const Hero = () => {
             className="text-center text-[40px] md:text-5xl lg:text-6xl"
             words="Transformig cocncepts" />
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
-            Hi, I'm Utkersh, a React/NextJS developer based out of India
+            Hi, I&apos;m Utkersh, a React/NextJS developer based out of India
           </p>
           <a href="#about-us">
             <MagicButton
