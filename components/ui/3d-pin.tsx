@@ -27,13 +27,17 @@ export const PinContainer = ({
   const onMouseLeave = () => {
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
-  const onClickCard = () => {
-    const a = document.createElement('a')
-    a.setAttribute('href', href ?? '')
-    a.setAttribute('target', '_blank')
-    a.setAttribute('rel', 'noopener noreferrer')
-    a.click()
-    a.remove()
+  const onClickCard = (e: React.ChangeEvent<HTMLDivElement>) => {
+    const eventTarget = e.target
+    // Check if this target is an a tag or a path element or its parent is an a tag
+    if (!(eventTarget.localName === 'a' || eventTarget.localName === 'path' || eventTarget.parentElement?.localName === 'a')) {
+      const a = document.createElement('a')
+      a.setAttribute('href', href ?? '')
+      a.setAttribute('target', '_blank')
+      a.setAttribute('rel', 'noopener noreferrer')
+      a.click()
+      a.remove()
+    }
   }
 
   return (
@@ -44,7 +48,7 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
-      onClick={onClickCard}
+      onClick={onClickCard as any}
     >
       <div
         style={{
