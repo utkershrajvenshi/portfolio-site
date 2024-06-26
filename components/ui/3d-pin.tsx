@@ -27,6 +27,14 @@ export const PinContainer = ({
   const onMouseLeave = () => {
     setTransform("translate(-50%,-50%) rotateX(0deg) scale(1)");
   };
+  const onClickCard = () => {
+    const a = document.createElement('a')
+    a.setAttribute('href', href ?? '')
+    a.setAttribute('target', '_blank')
+    a.setAttribute('rel', 'noopener noreferrer')
+    a.click()
+    a.remove()
+  }
 
   return (
     <div
@@ -36,6 +44,7 @@ export const PinContainer = ({
       )}
       onMouseEnter={onMouseEnter}
       onMouseLeave={onMouseLeave}
+      onClick={onClickCard}
     >
       <div
         style={{
