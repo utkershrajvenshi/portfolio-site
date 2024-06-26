@@ -19,10 +19,10 @@ const RecentProjects = () => {
                   <picture>
                     <img src="/bg.png" alt="bg-img" />
                   </picture>
+                  <picture className='z-10 absolute bottom-0'>
+                    <img src={img} alt={title} />
+                  </picture>
                 </div>
-                <picture className='z-10 absolute bottom-0'>
-                  <img src={img} alt={title} />
-                </picture>
               </div>
               <h1 className='font-bold text-base md:text-xl lg:text-2xl line-clamp-1'>
                 {title}
