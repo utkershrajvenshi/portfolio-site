@@ -15,7 +15,7 @@ const Approach = () => {
       <div className="my-20 flex flex-col lg:flex-row items-center justify-center gap-4">
         <Card
           title="Planning and Strategy"
-          icon={<AceternityIcon order="Phase 1"/>}
+          icon={<CanvasText titleText={"Planning and Strategy"} />}
           des={PhaseOneDescription}
         >
           <CanvasRevealEffect
@@ -25,7 +25,7 @@ const Approach = () => {
         </Card>
         <Card
           title="Development & Progress Update"
-          icon={<AceternityIcon order="Phase 2"/>}
+          icon={<CanvasText titleText={"Development & Progress Update"} />}
           des={PhaseTwoDescription}
         >
           <CanvasRevealEffect
@@ -40,7 +40,7 @@ const Approach = () => {
         </Card>
         <Card
           title="Development & Launch"
-          icon={<AceternityIcon order="Phase 3"/>}
+          icon={<CanvasText titleText={"Development & Launch"} />}
           des={PhaseThreeDescription}
         >
           <CanvasRevealEffect
@@ -104,13 +104,11 @@ const Card = ({
   );
 };
 
-const AceternityIcon = ({ order }: { order: string }) => {
+const CanvasText = ({ titleText }: { titleText: string }) => {
   return (
-    <div>
-      <button className="inline-flex h-12 animate-shimmer items-center justify-center rounded-lg border border-slate-800 bg-[linear-gradient(110deg,#010003,45%,#291e31,55%,#010003)] bg-[length:200%_100%] px-6 font-bold text-xl text-slate-400 transition-colors">
-        {order}
-      </button>
-    </div>
+    <span className="text-2xl font-bold">
+      {titleText}
+    </span>
   );
 };
 
