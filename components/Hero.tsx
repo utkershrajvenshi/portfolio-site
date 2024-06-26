@@ -25,9 +25,9 @@ const Hero = () => {
           <p className="text-center md:tracking-wider mb-4 text-sm md:text-lg lg:text-2xl">
             Hi, I&apos;m Utkersh, a passionate front-end developer based out of India crafting user-centric interfaces with React, Next.js, TypeScript & Tailwind CSS
           </p>
-          <a href="#about-us">
+          <a href="#about">
             <MagicButton
-              title="Show my portfolio"
+              title="Show my work"
               icon={<FaLocationArrow />}
               position="right"
             />

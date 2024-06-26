@@ -1,6 +1,7 @@
 export const navItems = [
   { name: "About", link: "#about" },
   { name: "Projects", link: "#projects" },
+  { name: 'Experience', link: '#experience' },
   { name: "Contact", link: "#contact" },
 ];
 
@@ -82,6 +83,7 @@ export const projects = [
     img: "/Portfolio.png",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
     link: "https://github.com/utkershrajvenshi/portfolio-site",
+    liveUrl: 'https://www.utkershrajvenshi.in'
   },
   {
     id: 2,
@@ -89,7 +91,8 @@ export const projects = [
     des: "Simplify data sharing across your connected devices with CtrlV. Seamlessly share with short-term clipboards.",
     img: "/CtrlV.png",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg", "/git.svg"],
-    link: "https://github.com/adrianhajdin/zoom-clone",
+    link: "https://github.com/utkershrajvenshi/ctrlv",
+    liveUrl: 'https://www.ctrlvio.com'
   },
 ];
 

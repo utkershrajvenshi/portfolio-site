@@ -11,7 +11,7 @@ const RecentProjects = () => {
         <span className="text-purple">recent projects</span>
       </h1>
       <div className='flex flex-wrap items-center justify-center p-4 gap-x-24 gap-y-8 mt-10'>
-        {projects.map(({ id, title, des, img, iconLists, link }) => (
+        {projects.map(({ id, title, des, img, iconLists, link, liveUrl }) => (
           <div key={id} className='lg:min-h-[32.5rem] h-[32rem] sm:h-[41rem] flex items-center justify-center w-[80vw] sm:w-[570px]'>
             <PinContainer title={link} href={link}>
               <div className='relative flex items-center justify-center w-[80vw] sm:w-[570px] overflow-hidden h-[30vh] sm:h-[40vh] mb-10'>
@@ -19,10 +19,10 @@ const RecentProjects = () => {
                   <picture>
                     <img src="/bg.png" alt="bg-img" />
                   </picture>
+                  <picture className='z-10 absolute bottom-0'>
+                    <img src={img} alt={title} />
+                  </picture>
                 </div>
-                <picture className='z-10 absolute bottom-0'>
-                  <img src={img} alt={title} />
-                </picture>
               </div>
               <h1 className='font-bold text-base md:text-xl lg:text-2xl line-clamp-1'>
                 {title}
@@ -44,12 +44,12 @@ const RecentProjects = () => {
                     </div>
                   ))}
                 </div>
-                <div className='flex justify-center items-center'>
+                <a href={liveUrl} target="_blank" className='flex justify-center items-center'>
                   <p className='flex text-sm md:text-xs lg:text-xl text-purple'>
                     Check Live Site
                   </p>
                   <FaLocationArrow className='ms-3' color='#CBACF9'/>
-                </div>
+                </a>
               </div>
             </PinContainer>
           </div>
