@@ -83,6 +83,7 @@ export const projects = [
     img: "/Portfolio.png",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg", "/fm.svg"],
     link: "https://github.com/utkershrajvenshi/portfolio-site",
+    liveUrl: 'https://www.utkershrajvenshi.in'
   },
   {
     id: 2,
@@ -91,6 +92,7 @@ export const projects = [
     img: "/CtrlV.png",
     iconLists: ["/next.svg", "/re.svg", "/tail.svg", "/ts.svg", "/git.svg"],
     link: "https://github.com/utkershrajvenshi/ctrlv",
+    liveUrl: 'https://www.ctrlvio.com'
   },
 ];
 
