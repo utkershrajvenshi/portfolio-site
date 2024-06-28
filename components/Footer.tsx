@@ -28,7 +28,7 @@ const Footer = () => {
         <p className="text-sm md:text-base font-light md:font-normal">
           Copyright © 2024, Utkersh Rajvenshi
         </p>
-        <div className="flex items-center mt-2 md:mt-0 gap-6 md:gap-3">
+        <div className="flex items-center mt-4 md:mt-0 gap-6 md:gap-3">
           {socialMedia.map((info) => (
             <div
               key={info.id}
