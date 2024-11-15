@@ -1,7 +1,6 @@
 import React from 'react'
-import MagicButton from './ui/MagicButton'
-import { FaLocationArrow } from 'react-icons/fa6'
 import { socialMedia } from '@/data'
+import CalBookingEmbed from './CalBookingEmbed';
 
 const Footer = () => {
   return (
@@ -16,13 +15,7 @@ const Footer = () => {
           <span>together?</span>
         </h1>
         <p className="text-white-200 my-5 text-center md:mt-10">Reach out to me today and let&apos;s discuss how we can better achieve your goals</p>
-        <a href="mailto:utkarshrajvanshi2@gmail.com">
-          <MagicButton
-            title="Let's get in touch"
-            icon={<FaLocationArrow />}
-            position="right"
-          />
-        </a>
+        <CalBookingEmbed />
       </div>
       <div className="flex mt-16 flex-col md:flex-row justify-between items-center">
         <p className="text-sm md:text-base font-light md:font-normal">
