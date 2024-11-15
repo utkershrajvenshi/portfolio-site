@@ -4,9 +4,6 @@ import { cn } from "@/utils/cn";
 import { BackgroundGradientAnimation } from "./GradientBg";
 import { GlobeDemo } from "./GridGlobe";
 import { listOne, listTwo, listThree } from "@/data";
-import Lottie from "react-lottie";
-import { useState } from "react";
-import animationData from '@/data/confetti.json'
 import MagicButton from "./MagicButton";
 import { IoCopyOutline } from "react-icons/io5";
 
@@ -48,18 +45,14 @@ export const BentoGridItem = ({
   titleClassName?: string
   spareImg?: string
 }) => {
-  const [copied, setCopied] = useState(false)
-
-  const handleCopy = () => {
+  const handleCallBooking = () => {
     try {
-      navigator.clipboard.writeText('utkarshrajvanshi2@gmail.com')
-      setCopied(true)
-
-      setTimeout(() => {
-        setCopied(false)
-      }, 5000)
+      const element = document.getElementById('book-a-call');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
     } catch (err) {
-      console.error('Failed to copy: ', err);
+      console.error('Failed to scroll: ', err);
     }
   }
 
@@ -130,25 +123,11 @@ export const BentoGridItem = ({
 
           {id === 5 && (
             <div className="mt-5 relative">
-              <div className={`absolute -bottom-5 right-0`}>
-                <Lottie
-                  options={{
-                    loop: copied,
-                    autoplay: copied,
-                    animationData: animationData,
-                    rendererSettings: {
-                      preserveAspectRatio: 'xMidYMid slice'
-                    }
-                  }}
-                />
-              </div>
-
               <MagicButton
-                title={copied ? 'Email copied' : 'Copy my email'}
-                icon={<IoCopyOutline />}
+                title="Book a call"
                 position="left"
                 otherClasses="!bg-[#161A31]"
-                handleClick={handleCopy}
+                handleClick={handleCallBooking}
               />
             </div>
           )}

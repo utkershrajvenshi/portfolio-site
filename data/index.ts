@@ -166,7 +166,7 @@ export const workExperience = [
   {
     id: 1,
     title: "Frontend Engineer - IDFC FIRST Bank",
-    desc: "Assisting in the development of a web-based internal platform using React, also working on a React Native hybrid app for the bank.",
+    desc: "Led development of flagship internal web platforms using React and TypeScript, while spearheading React Native hybrid mobile applications critical to the bank's digital transformation initiatives.",
     className: "md:col-span-2",
     thumbnail: "/exp1.svg",
   },
